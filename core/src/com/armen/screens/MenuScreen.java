@@ -85,23 +85,23 @@ public class MenuScreen extends AbstractGameScreen {
 
     private void loadSettings() {
         prefs.load();
-//        chkSound.setChecked(prefs.sound);
-//        sldSound.setValue(prefs.volSound);
-//        chkMusic.setChecked(prefs.music);
-//        sldMusic.setValue(prefs.volMusic);
-//        selCharSkin.setSelectedIndex(prefs.charSkin);
-//        onCharSkinSelected(prefs.charSkin);
+        chkSound.setChecked(prefs.sound);
+        sldSound.setValue(prefs.volSound);
+        chkMusic.setChecked(prefs.music);
+        sldMusic.setValue(prefs.volMusic);
+        selCharSkin.setSelectedIndex(prefs.charSkin);
+        onCharSkinSelected(prefs.charSkin);
         Gdx.app.log(LOG_TAG, "" + prefs);
         chkShowFpsCounter.setChecked(prefs.showFpsCounter);
         chkUseMonoChromeShader.setChecked(prefs.useMonochromeShader);
     }
 
     private void saveSettings() {
-//        prefs.sound = chkSound.isChecked();
-//        prefs.volSound = sldSound.getValue();
-//        prefs.music = chkMusic.isChecked();
-//        prefs.volMusic = sldMusic.getValue();
-//        prefs.charSkin = selCharSkin.getSelectedIndex();
+        prefs.sound = chkSound.isChecked();
+        prefs.volSound = sldSound.getValue();
+        prefs.music = chkMusic.isChecked();
+        prefs.volMusic = sldMusic.getValue();
+        prefs.charSkin = selCharSkin.getSelectedIndex();
         prefs.showFpsCounter = chkShowFpsCounter.isChecked();
         prefs.useMonochromeShader = chkUseMonoChromeShader.isChecked();
         prefs.save();
